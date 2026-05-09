@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Contact Busia Secondary School — phone, email, location, and online contact form."/>
+  <title>Contact Us | Busia Secondary School</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .contact-form-card {
+      background:var(--white);
+      border-radius:var(--radius-lg);
+      padding:2.5rem;
+      box-shadow:var(--shadow-lg);
+      border:1px solid var(--light-gray);
+    }
+    [data-theme="dark"] .contact-form-card { background:var(--dm-surface); border-color:var(--dm-border); }
+    .map-frame {
+      width:100%; height:320px;
+      border-radius:var(--radius-lg);
+      overflow:hidden;
+      background:linear-gradient(135deg,#e8ecf8,#d0d9f0);
+      display:flex; flex-direction:column;
+      align-items:center; justify-content:center;
+      border:2px dashed var(--mid-gray);
+      gap:1rem; color:var(--mid-gray);
+      font-size:.9rem; text-align:center; padding:2rem;
+    }
+    [data-theme="dark"] .map-frame { background:var(--dm-border); border-color:var(--dm-surface); }
+    .map-icon { font-size:3.5rem; }
+    .contact-social { display:flex; gap:.75rem; flex-wrap:wrap; margin-top:1.5rem; }
+    .contact-social-link {
+      display:flex; align-items:center; gap:.5rem;
+      padding:.6rem 1.1rem; border-radius:99px;
+      font-size:.85rem; font-weight:600;
+      transition:all .25s var(--ease);
+    }
+    .fb { background:#1877f2; color:#fff; }
+    .fb:hover { box-shadow:0 6px 20px rgba(24,119,242,.4); transform:translateY(-2px); }
+    .tw { background:#1da1f2; color:#fff; }
+    .tw:hover { box-shadow:0 6px 20px rgba(29,161,242,.4); transform:translateY(-2px); }
+    .ig { background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color:#fff; }
+    .ig:hover { box-shadow:0 6px 20px rgba(220,39,67,.4); transform:translateY(-2px); }
+    .wa { background:#25d366; color:#fff; }
+    .wa:hover { box-shadow:0 6px 20px rgba(37,211,102,.4); transform:translateY(-2px); }
+    .yt { background:#ff0000; color:#fff; }
+    .yt:hover { box-shadow:0 6px 20px rgba(255,0,0,.4); transform:translateY(-2px); }
+  </style>
+</head>
+<body>
+<div id="preloader"><div class="preloader-logo">BUSIA <span>SS</span></div><div class="preloader-bar"><div class="preloader-fill"></div></div></div>
+<button id="back-top" aria-label="Back to top">↑</button>
+
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon">BSS</div><div class="nav-logo-text"><strong>Busia Secondary School</strong><span>Est. 1978 · Busia, Uganda</span></div></a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="academics.html" class="nav-link">Academics</a></li>
+      <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+      <li><a href="news.html" class="nav-link">News & Events</a></li>
+      <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="student-life.html" class="nav-link">Student Life</a></li>
+      <li><a href="contact.html" class="nav-link active">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="datetime-widget">📅 <span id="live-time">--:--</span></div>
+      <button class="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+      <a href="admissions.html" class="btn btn-gold btn-sm">Apply Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="nav-link">🏠 Home</a><a href="about.html" class="nav-link">📖 About Us</a><a href="academics.html" class="nav-link">📚 Academics</a><a href="admissions.html" class="nav-link">📝 Admissions</a><a href="news.html" class="nav-link">📰 News & Events</a><a href="gallery.html" class="nav-link">🖼️ Gallery</a><a href="student-life.html" class="nav-link">🎓 Student Life</a><a href="contact.html" class="nav-link">📞 Contact</a>
+  <div style="margin-top:2rem"><a href="admissions.html" class="btn btn-gold" style="width:100%;justify-content:center;margin-bottom:.75rem">Apply Now</a><button class="dark-toggle" style="width:100%;background:rgba(255,255,255,.08);border-radius:8px;height:42px;color:#fff;font-size:.9rem">🌙 Toggle Dark Mode</button></div>
+</nav>
+<div class="ticker-wrap"><div class="ticker-label">📢 News</div><div class="ticker-track" id="ticker-track">Loading…</div></div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Contact Us</span></nav>
+    <h1 class="page-hero-title">Get In <span>Touch</span></h1>
+    <p class="page-hero-sub">We'd love to hear from you. Whether you have a question about admissions, academics, or anything else — our team is ready to help.</p>
+  </div>
+</section>
+
+<!-- CONTACT MAIN -->
+<section class="section" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- LEFT: Info -->
+      <div>
+        <span class="section-tag">Reach Us</span>
+        <h2 id="contact-heading" class="section-title">Contact <span>Information</span></h2>
+        <p style="color:var(--text-light);margin-bottom:2rem;line-height:1.7">Our administrative offices are open Monday to Friday, 8 AM to 5 PM, and Saturday from 9 AM to 1 PM. For urgent matters, call us directly.</p>
+
+        <div class="contact-info-item reveal">
+          <div class="contact-info-icon">📍</div>
+          <div class="contact-info-text">
+            <strong>Physical Address</strong>
+            <span>Plot 14, School Road, Busia Town<br/>Eastern Uganda, Uganda</span>
+          </div>
+        </div>
+        <div class="contact-info-item reveal reveal-delay-1">
+          <div class="contact-info-icon">📞</div>
+          <div class="contact-info-text">
+            <strong>Phone Numbers</strong>
+            <span>+256 772 123 456 (Main Office)<br/>+256 700 987 654 (Admissions)<br/>+256 755 321 099 (Bursar)</span>
+          </div>
+        </div>
+        <div class="contact-info-item reveal reveal-delay-2">
+          <div class="contact-info-icon">✉️</div>
+          <div class="contact-info-text">
+            <strong>Email Addresses</strong>
+            <span>info@busiasecondary.ac.ug (General)<br/>admissions@busiasecondary.ac.ug<br/>principal@busiasecondary.ac.ug</span>
+          </div>
+        </div>
+        <div class="contact-info-item reveal reveal-delay-3">
+          <div class="contact-info-icon">🕐</div>
+          <div class="contact-info-text">
+            <strong>Office Hours</strong>
+            <span>Monday – Friday: 8:00 AM – 5:00 PM<br/>Saturday: 9:00 AM – 1:00 PM<br/>Sunday & Public Holidays: Closed</span>
+          </div>
+        </div>
+        <div class="contact-info-item reveal">
+          <div class="contact-info-icon">📮</div>
+          <div class="contact-info-text">
+            <strong>Post Office Box</strong>
+            <span>P.O. Box 112<br/>Busia, Uganda</span>
+          </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div style="margin-top:1.5rem" class="reveal">
+          <strong style="display:block;font-size:.9rem;font-weight:600;margin-bottom:.75rem;color:var(--text)">Follow Us On Social Media</strong>
+          <div class="contact-social">
+            <a href="#" class="contact-social-link fb">📘 Facebook</a>
+            <a href="#" class="contact-social-link tw">🐦 Twitter/X</a>
+            <a href="#" class="contact-social-link ig">📸 Instagram</a>
+            <a href="#" class="contact-social-link wa">💬 WhatsApp</a>
+            <a href="#" class="contact-social-link yt">▶️ YouTube</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div class="contact-form-card reveal reveal-delay-2">
+        <h3 style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:.4rem">Send Us a Message</h3>
+        <p style="color:var(--text-light);font-size:.88rem;margin-bottom:1.5rem">Fill in the form below and we'll respond within 24 hours.</p>
+
+        <form id="contact-form" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="cf-name">Full Name *</label>
+              <input class="form-input" id="cf-name" name="name" type="text" placeholder="Your full name" required/>
+              <div class="form-error"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-email">Email Address *</label>
+              <input class="form-input" id="cf-email" name="email" type="email" placeholder="your@email.com" required/>
+              <div class="form-error"></div>
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="cf-phone">Phone Number</label>
+              <input class="form-input" id="cf-phone" name="phone" type="tel" placeholder="+256 7XX XXX XXX"/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-subject">Subject *</label>
+              <select class="form-select" id="cf-subject" name="subject" required>
+                <option value="">Select a topic</option>
+                <option>Admissions Inquiry</option>
+                <option>Fee Payment</option>
+                <option>Academic Query</option>
+                <option>Student Welfare</option>
+                <option>Partnership / Sponsorship</option>
+                <option>Alumni Matters</option>
+                <option>General Inquiry</option>
+                <option>Other</option>
+              </select>
+              <div class="form-error"></div>
+            </div>
+          </div>
+          <div class="form-group" style="position:relative">
+            <label class="form-label" for="cf-message">Your Message * <small style="color:var(--text-light);font-weight:400">(max 500 characters)</small></label>
+            <textarea class="form-textarea" id="cf-message" name="message" placeholder="Type your message here…" maxlength="500" required></textarea>
+            <span class="char-count">0/500</span>
+            <div class="form-error"></div>
+          </div>
+          <!-- Honeypot anti-spam -->
+          <div style="display:none"><input type="text" name="_trap" tabindex="-1" autocomplete="off"/></div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:1rem;padding:1rem">
+            📨 Send Message
+          </button>
+          <p style="font-size:.78rem;color:var(--text-light);text-align:center;margin-top:.75rem">
+            🔒 Your message is stored securely. We never share your information.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MAP SECTION -->
+<section class="section section--gray" aria-labelledby="map-heading">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:2rem">
+      <span class="section-tag">Find Us</span>
+      <h2 id="map-heading" class="section-title">Our <span>Location</span></h2>
+      <p class="section-subtitle">Busia Secondary School is located in Busia Town, Eastern Uganda, easily accessible by road from Kampala (270 km), Jinja (150 km), and the Kenya border (2 km).</p>
+    </div>
+    <div class="map-frame reveal">
+      <div class="map-icon">📍</div>
+      <div>
+        <h3 style="font-family:var(--font-display);color:var(--text);margin-bottom:.5rem">Busia Secondary School</h3>
+        <p style="color:var(--text-light);max-width:380px;margin:0 auto .75rem">Plot 14, School Road, Busia Town, Eastern Uganda<br/>Near Busia District Headquarters</p>
+        <a href="https://maps.google.com/?q=Busia,Uganda" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">🗺️ Open in Google Maps</a>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:2rem">
+      <div class="info-card text-center" style="padding:1.5rem">
+        <div style="font-size:2rem;margin-bottom:.5rem">🚌</div>
+        <div style="font-weight:700;margin-bottom:.3rem">By Bus</div>
+        <div style="font-size:.85rem;color:var(--text-light)">Direct buses from Kampala (Post Bus, Link Bus) to Busia. 4-5 hrs.</div>
+      </div>
+      <div class="info-card text-center" style="padding:1.5rem">
+        <div style="font-size:2rem;margin-bottom:.5rem">🚗</div>
+        <div style="font-weight:700;margin-bottom:.3rem">By Road</div>
+        <div style="font-size:.85rem;color:var(--text-light)">From Kampala via Jinja on the Tororo–Busia Highway. 4 hrs drive.</div>
+      </div>
+      <div class="info-card text-center" style="padding:1.5rem">
+        <div style="font-size:2rem;margin-bottom:.5rem">🛵</div>
+        <div style="font-weight:700;margin-bottom:.3rem">Boda Boda</div>
+        <div style="font-size:.85rem;color:var(--text-light)">From Busia Town centre, ask for "BSS" or "Busia Secondary School". 5 minutes.</div>
+      </div>
+      <div class="info-card text-center" style="padding:1.5rem">
+        <div style="font-size:2rem;margin-bottom:.5rem">✈️</div>
+        <div style="font-weight:700;margin-bottom:.3rem">From Nairobi</div>
+        <div style="font-size:.85rem;color:var(--text-light)">Cross the Uganda–Kenya border at Busia (2 km). Easy access from western Kenya.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPARTMENTS CONTACTS -->
+<section class="section" aria-labelledby="dept-contacts-heading">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:2.5rem">
+      <span class="section-tag">Departments</span>
+      <h2 id="dept-contacts-heading" class="section-title">Key <span>Contacts</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem">
+      <div class="info-card reveal">
+        <div class="info-card-icon">👤</div>
+        <h3 class="info-card-title">Principal's Office</h3>
+        <p class="info-card-text">Mr. John Wafula Okech<br/>📞 +256 772 123 456<br/>✉️ principal@busiasecondary.ac.ug</p>
+      </div>
+      <div class="info-card reveal reveal-delay-1">
+        <div class="info-card-icon">📝</div>
+        <h3 class="info-card-title">Admissions Office</h3>
+        <p class="info-card-text">Mrs. Esther Nalwanga<br/>📞 +256 700 987 654<br/>✉️ admissions@busiasecondary.ac.ug</p>
+      </div>
+      <div class="info-card reveal reveal-delay-2">
+        <div class="info-card-icon">💰</div>
+        <h3 class="info-card-title">Bursar / Accounts</h3>
+        <p class="info-card-text">Mr. Francis Ochieno<br/>📞 +256 755 321 099<br/>✉️ accounts@busiasecondary.ac.ug</p>
+      </div>
+      <div class="info-card reveal reveal-delay-3">
+        <div class="info-card-icon">📚</div>
+        <h3 class="info-card-title">Director of Studies</h3>
+        <p class="info-card-text">Mrs. Rose Akello<br/>📞 +256 772 445 678<br/>✉️ studies@busiasecondary.ac.ug</p>
+      </div>
+      <div class="info-card reveal">
+        <div class="info-card-icon">⚽</div>
+        <h3 class="info-card-title">Sports Department</h3>
+        <p class="info-card-text">Mr. Samuel Odoi<br/>📞 +256 701 876 543<br/>✉️ sports@busiasecondary.ac.ug</p>
+      </div>
+      <div class="info-card reveal reveal-delay-1">
+        <div class="info-card-icon">🏥</div>
+        <h3 class="info-card-title">Medical Centre</h3>
+        <p class="info-card-text">Nurse Sarah Zawedde<br/>📞 +256 752 234 567<br/>✉️ medical@busiasecondary.ac.ug</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section--gray" aria-labelledby="cfaq-heading">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:2.5rem">
+      <span class="section-tag">Quick Answers</span>
+      <h2 id="cfaq-heading" class="section-title">Frequently Asked <span>Questions</span></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-question">What are your office hours? <div class="faq-icon">+</div></button><div class="faq-answer">Our main administrative offices are open Monday to Friday from 8:00 AM to 5:00 PM, and Saturday from 9:00 AM to 1:00 PM. We are closed on Sundays and public holidays.</div></div>
+      <div class="faq-item"><button class="faq-question">How quickly will you respond to my message? <div class="faq-icon">+</div></button><div class="faq-answer">We aim to respond to all inquiries within 24 business hours. For urgent matters, we recommend calling our main office directly at +256 772 123 456.</div></div>
+      <div class="faq-item"><button class="faq-question">Can I visit the school for a tour before applying? <div class="faq-icon">+</div></button><div class="faq-answer">Absolutely! We welcome prospective students and parents to visit our campus. Please call or email ahead to schedule a guided tour with our admissions team. Walk-in visits are also welcome during office hours.</div></div>
+      <div class="faq-item"><button class="faq-question">Where should I send physical applications and documents? <div class="faq-icon">+</div></button><div class="faq-answer">All physical applications and documents should be submitted to the Admissions Office at Plot 14, School Road, Busia Town. You can also post documents to P.O. Box 112, Busia, Uganda. Ensure you retain copies of all submitted documents.</div></div>
+      <div class="faq-item"><button class="faq-question">Is there parking available when visiting the school? <div class="faq-icon">+</div></button><div class="faq-answer">Yes. The school has a spacious car park at the main gate. Security personnel will guide you on arrival. We can also accommodate school buses for group visits from other institutions.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));padding:4rem 0;text-align:center">
+  <div class="container">
+    <h2 style="font-family:var(--font-display);font-size:2rem;color:var(--white);margin-bottom:.75rem">Ready to Join <span style="color:var(--gold-light)">Busia Secondary School?</span></h2>
+    <p style="color:rgba(255,255,255,.75);margin-bottom:1.5rem;font-size:1.05rem">Applications for 2025/2026 are now open. Start your journey to academic excellence today.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="admissions.html" class="btn btn-gold">📝 Apply for Admission</a>
+      <a href="tel:+256772123456" class="btn btn-outline">📞 Call Us Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="margin-bottom:.5rem"><div class="nav-logo-icon">BSS</div><div class="nav-logo-text"><strong style="color:#fff">Busia Secondary School</strong><span>Est. 1978 · Busia, Uganda</span></div></a>
+        <p>Providing quality education and nurturing Uganda's future leaders since 1978. Excellence is our standard.</p>
+        <div class="social-links"><a href="#" class="social-link">📘</a><a href="#" class="social-link">🐦</a><a href="#" class="social-link">📸</a><a href="#" class="social-link">▶️</a><a href="#" class="social-link">💬</a></div>
+      </div>
+      <div><div class="footer-heading">Quick Links</div><nav class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="academics.html">Academics</a><a href="admissions.html">Admissions</a><a href="news.html">News & Events</a><a href="gallery.html">Gallery</a></nav></div>
+      <div><div class="footer-heading">Student Services</div><nav class="footer-links"><a href="student-life.html">Student Life</a><a href="student-life.html#clubs">Clubs & Societies</a><a href="student-life.html#sports">Sports</a><a href="student-life.html#leadership">Student Council</a><a href="admissions.html#fees">Fee Structure</a></nav></div>
+      <div>
+        <div class="footer-heading">Contact Us</div>
+        <div class="footer-contact-item"><span>📍</span><span>Plot 14, School Road, Busia Town, Eastern Uganda</span></div>
+        <div class="footer-contact-item"><span>📞</span><span>+256 772 123 456<br/>+256 700 987 654</span></div>
+        <div class="footer-contact-item"><span>✉️</span><span>info@busiasecondary.ac.ug</span></div>
+        <div class="footer-contact-item"><span>🕐</span><span>Mon–Fri: 8:00 AM – 5:00 PM<br/>Sat: 9:00 AM – 1:00 PM</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
+      <span>© 2025 Busia Secondary School. All rights reserved.</span>
+      <span>Designed with ❤️ for <a href="#">Busia Community</a> · <a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox"><div class="lightbox-content"><img id="lightbox-img" src="" alt=""/></div><button class="lightbox-close" id="lightbox-close">✕</button></div>
+<script src="js/script.js"></script>
+</body>
+</html>

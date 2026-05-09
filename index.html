@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Busia Secondary School — Excellence in Education since 1978. Uganda's premier secondary school offering O-Level and A-Level education." />
+  <meta name="keywords" content="Busia Secondary School, Uganda schools, UNEB, O-Level, A-Level, admissions" />
+  <title>Busia Secondary School | Excellence in Education</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"EducationalOrganization","name":"Busia Secondary School","url":"https://busiasecondary.ac.ug","address":{"@type":"PostalAddress","addressLocality":"Busia","addressRegion":"Eastern Uganda","addressCountry":"UG"}}
+  </script>
+</head>
+<body>
+
+<!-- ══ PRELOADER ══ -->
+<div id="preloader" role="status" aria-label="Loading">
+  <div class="preloader-logo">BUSIA <span>Secondary School</span></div>
+  <div class="preloader-bar"><div class="preloader-fill"></div></div>
+</div>
+
+<!-- ══ BACK TO TOP ══ -->
+<button id="back-top" aria-label="Back to top">↑</button>
+
+<!-- ══ NAVBAR ══ -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon"><img src="images/ssb-logo.png" alt=""></div>
+      <div class="nav-logo-text">
+        <strong>Busia Secondary School</strong>
+        <span>Est. 1978 · Busia, Uganda</span>
+      </div>
+    </a>
+
+    <ul class="nav-menu" role="list">
+      <li class="nav-item"><a href="index.html" class="nav-link active" data-page="index.html">Home</a></li>
+      <li class="nav-item">
+        <a href="about.html" class="nav-link" data-page="about.html">About Us <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="dropdown">
+          <a href="about.html#mission">Our Mission & Vision</a>
+          <a href="about.html#history">School History</a>
+          <a href="about.html#staff">Faculty & Staff</a>
+          <a href="about.html#facilities">Facilities</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="academics.html" class="nav-link" data-page="academics.html">Academics <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="dropdown">
+          <a href="academics.html#olevel">O-Level (S.1–S.4)</a>
+          <a href="academics.html#alevel">A-Level (S.5–S.6)</a>
+          <a href="academics.html#departments">Departments</a>
+          <a href="academics.html#timetable">Class Timetable</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="admissions.html" class="nav-link" data-page="admissions.html">Admissions</a></li>
+      <li class="nav-item"><a href="news.html" class="nav-link" data-page="news.html">News & Events</a></li>
+      <li class="nav-item"><a href="gallery.html" class="nav-link" data-page="gallery.html">Gallery</a></li>
+      <li class="nav-item"><a href="student-life.html" class="nav-link" data-page="student-life.html">Student Life</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link" data-page="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <div class="datetime-widget">📅 <span id="live-time">--:--</span></div>
+      <button class="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+      <a href="admissions.html" class="btn btn-gold btn-sm">Apply Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ MOBILE MENU ══ -->
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+  <a href="index.html" class="nav-link">🏠 Home</a>
+  <a href="about.html" class="nav-link mobile-menu-toggle">📖 About Us <svg class="chevron" style="width:16px;height:16px;float:right;transition:transform .3s" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+  <div class="mobile-dropdown">
+    <a href="about.html#mission">Our Mission</a><a href="about.html#history">History</a><a href="about.html#staff">Staff</a>
+  </div>
+  <a href="academics.html" class="nav-link">📚 Academics</a>
+  <a href="admissions.html" class="nav-link">📝 Admissions</a>
+  <a href="news.html" class="nav-link">📰 News & Events</a>
+  <a href="gallery.html" class="nav-link">🖼️ Gallery</a>
+  <a href="student-life.html" class="nav-link">🎓 Student Life</a>
+  <a href="contact.html" class="nav-link">📞 Contact</a>
+  <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1)">
+    <a href="admissions.html" class="btn btn-gold" style="width:100%;justify-content:center;margin-bottom:.75rem">Apply Now</a>
+    <button class="dark-toggle" style="width:100%;background:rgba(255,255,255,.08);border-radius:8px;height:42px;color:#fff;font-size:.9rem">🌙 Toggle Dark Mode</button>
+  </div>
+</nav>
+
+<!-- ══ ANNOUNCEMENTS TICKER ══ -->
+<div class="ticker-wrap" aria-label="Announcements">
+  <div class="ticker-label">📢 News</div>
+  <div class="ticker-track" id="ticker-track">Loading announcements…</div>
+</div>
+
+<!-- ══════════════════════════════════════
+     HERO SECTION
+══════════════════════════════════════ -->
+<section class="hero" aria-label="Hero banner">
+  <div class="hero-slider">
+    <div class="hero-slide hero-slide-1 active"></div>
+    <div class="hero-slide hero-slide-2"></div>
+    <div class="hero-slide hero-slide-3"></div>
+  </div>
+  <div class="hero-overlay"></div>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        Ranked #1 — Eastern Uganda 2024
+      </div>
+      <h1 class="hero-title">Shaping Brilliant<br><span>Minds & Leaders</span></h1>
+      <div class="hero-typing" id="typing-text" aria-live="polite"></div>
+      <p class="hero-desc">Busia Secondary School provides world-class education combining academic excellence with character development, sporting achievement, and holistic growth for every student.</p>
+      <div class="hero-buttons">
+        <a href="admissions.html" class="btn btn-gold">📝 Apply for Admission</a>
+        <a href="about.html" class="btn btn-outline">🏛️ Discover Our School</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-dots" role="tablist" aria-label="Slide navigation">
+    <button class="hero-dot active" aria-label="Slide 1"></button>
+    <button class="hero-dot" aria-label="Slide 2"></button>
+    <button class="hero-dot" aria-label="Slide 3"></button>
+  </div>
+  <div class="scroll-indicator" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     STATS SECTION
+══════════════════════════════════════ -->
+<section class="stats-section" aria-label="School statistics">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card reveal">
+        <div class="stat-icon">👩‍🎓</div>
+        <div class="stat-number"><span class="counter" data-target="2847">0</span></div>
+        <div class="stat-label">Students Enrolled</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-1">
+        <div class="stat-icon">👨‍🏫</div>
+        <div class="stat-number"><span class="counter" data-target="124">0</span></div>
+        <div class="stat-label">Qualified Teachers</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-2">
+        <div class="stat-icon">📊</div>
+        <div class="stat-number"><span class="counter" data-target="98">0</span><span class="stat-suffix">%</span></div>
+        <div class="stat-label">UNEB Pass Rate</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-3">
+        <div class="stat-icon">🏆</div>
+        <div class="stat-number"><span class="counter" data-target="32">0</span></div>
+        <div class="stat-label">Clubs & Societies</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-4">
+        <div class="stat-icon">🥇</div>
+        <div class="stat-number"><span class="counter" data-target="46">0</span><span class="stat-suffix">+</span></div>
+        <div class="stat-label">Years of Excellence</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     WELCOME / PRINCIPAL'S MESSAGE
+══════════════════════════════════════ -->
+<section class="section" aria-labelledby="welcome-heading">
+  <div class="container">
+    <div class="welcome-grid">
+      <div class="welcome-img-wrap reveal">
+        <img
+          src="images/mayende.jpg"
+          alt="School headteacher"
+          class="welcome-img"
+          loading="lazy"
+        />
+        <div class="welcome-badge">
+          <strong>46+</strong>
+          Years of Academic Excellence
+        </div>
+      </div>
+      <div class="welcome-text reveal reveal-delay-2">
+        <span class="section-tag">Headteacher's Welcome</span>
+        <h2 id="welcome-heading" class="section-title">A Message from Our <span>Headteacher</span></h2>
+        <p style="color:var(--text-light);margin-bottom:1rem;line-height:1.8">Welcome to Busia Secondary School — a place where every student's potential is discovered, nurtured, and celebrated. Since our founding in 1978, we have maintained an unwavering commitment to academic excellence, moral integrity, and the overall development of young people.</p>
+        <p style="color:var(--text-light);margin-bottom:1rem;line-height:1.8">Our dedicated faculty, modern facilities, and vibrant school culture create an environment where students don't just learn — they thrive. We prepare young men and women to face the challenges of a rapidly changing world with confidence, compassion, and competence.</p>
+        <p style="color:var(--text-light);margin-bottom:1.5rem;line-height:1.8">We are proud of our consistently high UNEB results, our nationally recognized sports programs, and the leadership roles our alumni hold across Uganda and beyond. I invite you to join the Busia Secondary School family.</p>
+        <a href="about.html" class="btn btn-primary">Learn More About Us →</a>
+        <div class="signature"> | Mr. Aggrey Mayende, Headteacher</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     WHY CHOOSE US
+══════════════════════════════════════ -->
+<section class="section section--gray" aria-labelledby="features-heading">
+  <div class="container text-center">
+    <span class="section-tag">Why Choose Us</span>
+    <h2 id="features-heading" class="section-title">A School Built on <span>Excellence</span></h2>
+    <p class="section-subtitle">We combine rigorous academics with holistic development to produce well-rounded graduates ready for university and life.</p>
+    <div class="subjects-grid" style="grid-template-columns:repeat(auto-fill,minmax(230px,1fr))">
+      <div class="info-card reveal">
+        <div class="info-card-icon">📚</div>
+        <h3 class="info-card-title">Academic Excellence</h3>
+        <p class="info-card-text">98% UNEB pass rate with multiple Division 1 students each year. Strong O-Level and A-Level programs.</p>
+      </div>
+      <div class="info-card reveal reveal-delay-1">
+        <div class="info-card-icon">🔬</div>
+        <h3 class="info-card-title">Modern Laboratories</h3>
+        <p class="info-card-text">Fully equipped Physics, Chemistry, Biology, and Computer laboratories supporting hands-on learning.</p>
+      </div>
+      <div class="info-card reveal reveal-delay-2">
+        <div class="info-card-icon">⚽</div>
+        <h3 class="info-card-title">Sports Excellence</h3>
+        <p class="info-card-text">Regional champions in football, athletics, and netball. Professional coaching and modern sports facilities.</p>
+      </div>
+      <div class="info-card reveal reveal-delay-3">
+        <div class="info-card-icon">🎭</div>
+        <h3 class="info-card-title">Arts & Culture</h3>
+        <p class="info-card-text">Vibrant music, drama, and debate clubs that develop creativity, communication, and confidence.</p>
+      </div>
+      <div class="info-card reveal reveal-delay-4">
+        <div class="info-card-icon">🤝</div>
+        <h3 class="info-card-title">Strong Values</h3>
+        <p class="info-card-text">Character education and pastoral care ensuring every student develops strong moral values and discipline.</p>
+      </div>
+      <div class="info-card reveal">
+        <div class="info-card-icon">🌐</div>
+        <h3 class="info-card-title">Digital Learning</h3>
+        <p class="info-card-text">Computer lab with internet access, digital classrooms, and ICT integration across all subjects.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     LATEST NEWS
+══════════════════════════════════════ -->
+<section class="section" aria-labelledby="news-heading">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem">
+      <div>
+        <span class="section-tag">Latest Updates</span>
+        <h2 id="news-heading" class="section-title" style="margin-bottom:0">News & <span>Announcements</span></h2>
+      </div>
+      <a href="news.html" class="btn btn-outline-dark">View All News →</a>
+    </div>
+    <div class="news-grid">
+      <!-- Card 1 -->
+      <article class="news-card reveal" data-title="UNEB 2024 Results" data-category="academics">
+        <div class="news-card-img-wrap">
+          <img class="news-card-img" src="images/IMG_20250216_130604_188@1550464639.jpg" alt="UNEB Results Celebration" loading="lazy"/>
+        </div>
+        <div class="news-card-body">
+          <div class="news-card-meta">
+            <span class="news-cat">Academics</span>
+            <span>📅 Jan 15, 2025</span>
+          </div>
+          <h3 class="news-card-title">Busia SS Achieves Outstanding UNEB 2024 Results — 98% Pass Rate</h3>
+          <p class="news-card-excerpt">Busia Secondary School has once again demonstrated academic excellence with 15 students achieving Division 1 in the 2024 Uganda Certificate of Education examinations.</p>
+          <a href="news.html" class="read-more">Read More →</a>
+        </div>
+      </article>
+      <!-- Card 2 -->
+      <article class="news-card reveal reveal-delay-1" data-title="New Science Laboratory" data-category="facilities">
+        <div class="news-card-img-wrap">
+          <img class="news-card-img" src="images/Busia-SS-classroom-after.jpg" alt="New Science Laboratory" loading="lazy"/>
+        </div>
+        <div class="news-card-body">
+          <div class="news-card-meta">
+            <span class="news-cat">Facilities</span>
+            <span>📅 Feb 3, 2025</span>
+          </div>
+          <h3 class="news-card-title">New State-of-the-Art Science Laboratory Officially Opened</h3>
+          <p class="news-card-excerpt">The school has commissioned a brand-new, fully equipped Science Laboratory funded through the school's development fund and community contributions.</p>
+          <a href="news.html" class="read-more">Read More →</a>
+        </div>
+      </article>
+      <!-- Card 3 -->
+      <article class="news-card reveal reveal-delay-2" data-title="Regional Debate Champions" data-category="events">
+        <div class="news-card-img-wrap">
+          <img class="news-card-img" src="images/IMG_20240926_190651_596@1555853961.jpg" alt="Debate Competition" loading="lazy"/>
+        </div>
+        <div class="news-card-body">
+          <div class="news-card-meta">
+            <span class="news-cat">Events</span>
+            <span>📅 Mar 10, 2025</span>
+          </div>
+          <h3 class="news-card-title">Busia SS Debate Team Wins Eastern Uganda Regional Championship</h3>
+          <p class="news-card-excerpt">Our debate team competed against 24 schools from across Eastern Uganda and emerged as champions with a convincing performance on the topic of climate change.</p>
+          <a href="news.html" class="read-more">Read More →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     COUNTDOWN + UPCOMING EVENTS
+══════════════════════════════════════ -->
+<div class="countdown-section" aria-label="Event countdown">
+  <div class="container">
+    <h3 class="countdown-title">⏰ Countdown to <span>Annual Prize Giving Day</span> — April 20, 2025</h3>
+    <div class="countdown-wrap" id="countdown-wrap" data-target="2025-04-20T09:00:00"></div>
+  </div>
+</div>
+
+<section class="section section--gray" aria-labelledby="events-heading">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem">
+      <div>
+        <span class="section-tag">School Calendar</span>
+        <h2 id="events-heading" class="section-title" style="margin-bottom:0">Upcoming <span>Events</span></h2>
+      </div>
+      <a href="news.html#events" class="btn btn-outline-dark">Full Calendar →</a>
+    </div>
+    <div class="events-list">
+      <div class="event-item reveal">
+        <div class="event-date"><div class="event-day">20</div><div class="event-month">Apr</div></div>
+        <div class="event-info">
+          <div class="event-title">Annual Prize Giving &amp; Graduation Ceremony</div>
+          <div class="event-meta"><span>📍 School Main Hall</span><span>🕘 9:00 AM – 4:00 PM</span><span>👥 All Students &amp; Parents</span></div>
+        </div>
+      </div>
+      <div class="event-item reveal reveal-delay-1">
+        <div class="event-date"><div class="event-day">15</div><div class="event-month">May</div></div>
+        <div class="event-info">
+          <div class="event-title">Inter-House Sports Competition 2025</div>
+          <div class="event-meta"><span>📍 School Playground</span><span>🕘 All Day</span><span>👥 All Students</span></div>
+        </div>
+      </div>
+      <div class="event-item reveal reveal-delay-2">
+        <div class="event-date"><div class="event-day">2</div><div class="event-month">Jun</div></div>
+        <div class="event-info">
+          <div class="event-title">S.4 &amp; S.6 Mock Examination Period Begins</div>
+          <div class="event-meta"><span>📍 Examination Halls</span><span>🕘 8:00 AM</span><span>👥 S.4 &amp; S.6 Students</span></div>
+        </div>
+      </div>
+      <div class="event-item reveal reveal-delay-3">
+        <div class="event-date"><div class="event-day">28</div><div class="event-month">Jun</div></div>
+        <div class="event-info">
+          <div class="event-title">End of Term 1 &amp; Parents' Day</div>
+          <div class="event-meta"><span>📍 School Grounds</span><span>🕘 10:00 AM</span><span>👥 Parents Invited</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     ADMISSIONS CTA
+══════════════════════════════════════ -->
+<section class="section section--dark" style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));text-align:center;position:relative;overflow:hidden">
+  <div style="position:absolute;top:-50%;right:-10%;width:500px;height:500px;border-radius:50%;background:rgba(240,180,41,.07);pointer-events:none"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <span class="section-tag" style="background:rgba(240,180,41,.2);color:var(--gold-light)">Admissions 2025/26</span>
+    <h2 class="section-title" style="color:var(--white)">Join the Busia Secondary<br><span style="color:var(--gold-light)">School Family</span></h2>
+    <p class="section-subtitle" style="color:rgba(255,255,255,.75)">Applications are now open for S.1 and S.5 intake for the academic year 2025/2026. Secure your child's future at Uganda's finest school.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1rem">
+      <a href="admissions.html" class="btn btn-gold reveal">📝 Start Application</a>
+      <a href="contact.html" class="btn btn-outline reveal reveal-delay-1">📞 Contact Admissions</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════════ -->
+<section class="section testimonials-section" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:2.5rem">
+      <span class="section-tag">Community Voices</span>
+      <h2 id="testimonials-heading" class="section-title">What Our <span>Community Says</span></h2>
+    </div>
+    <div class="testimonials-track">
+      <div class="testimonials-inner" id="testimonials-inner">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Busia Secondary School transformed my son completely. The teachers are passionate, the facilities are modern, and the discipline instilled has shaped him into a responsible young man. He graduated with Division 1 and is now studying Medicine at Makerere University."</p>
+          <div class="testimonial-author">
+            <img src="images/IMG_20250828_181309_729.jpg" alt="Parent testimonial" class="testimonial-avatar"/>
+            <div><div class="testimonial-name">| Mrs. Grace Namukose</div><div class="testimonial-role">Parent of Alumni, Class of 2022</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"The quality of education at Busia SS is unparalleled in Eastern Uganda. I joined S.1 with average grades but left with seven 1s in UCE. The teachers gave us individual attention and the learning environment was incredibly motivating."</p>
+          <div class="testimonial-author">
+            <img src="images/IMG_20250828_181309_729.jpg" alt="Alumni testimonial" class="testimonial-avatar"/>
+            <div><div class="testimonial-name">| Remmy Auma</div><div class="testimonial-role">UCE Candidate, Class of 2022 — Division 1</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"The quality of education at Busia SS is unparalleled in Eastern Uganda. I joined S.5 with low grades but left with all the principal passes in UACE. The teachers gave us individual attention and the learning environment was incredibly motivating."</p>
+          <div class="testimonial-author">
+            <img src="images/profile-pic.jpg" alt="Alumni testimonial" class="testimonial-avatar"/>
+            <div><div class="testimonial-name">| Pius Babalanda</div><div class="testimonial-role">UACE Candidate, Class of 2022 — 14 Points</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"As an employer, whenever I see Busia Secondary School on a resume, I know that candidate has been through rigorous academic training and built strong character. Our company actively seeks BSS graduates. The school produces truly exceptional young people."</p>
+          <div class="testimonial-author">
+            <img src="images/IMG_20240926_190651_596@1555853961.jpg" alt="Employer testimonial" class="testimonial-avatar"/>
+            <div><div class="testimonial-name">| Mr. Robert Ouma</div><div class="testimonial-role">CEO, Busia Business Group</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-controls">
+      <button class="testimonial-prev" id="testimonial-prev" aria-label="Previous testimonial">←</button>
+      <button class="testimonial-next" id="testimonial-next" aria-label="Next testimonial">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="margin-bottom:.5rem">
+          <div class="nav-logo-icon">BSS</div>
+          <div class="nav-logo-text">
+            <strong style="color:#fff">Busia Secondary School</strong>
+            <span>Est. 1978 · Busia, Uganda</span>
+          </div>
+        </a>
+        <p>Providing quality education and nurturing the next generation of Uganda's leaders since 1978. Excellence is our standard.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook">📘</a>
+          <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-link" aria-label="Instagram">📸</a>
+          <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+          <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Quick Links</div>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="academics.html">Academics</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="news.html">News & Events</a>
+          <a href="gallery.html">Gallery</a>
+        </nav>
+      </div>
+      <div>
+        <div class="footer-heading">Student Services</div>
+        <nav class="footer-links" aria-label="Student services">
+          <a href="student-life.html">Student Life</a>
+          <a href="student-life.html#clubs">Clubs & Societies</a>
+          <a href="student-life.html#sports">Sports Activities</a>
+          <a href="student-life.html#leadership">Student Council</a>
+          <a href="academics.html#timetable">Class Timetable</a>
+          <a href="admissions.html#fees">Fee Structure</a>
+        </nav>
+      </div>
+      <div>
+        <div class="footer-heading">Contact Us</div>
+        <div class="footer-contact-item"><span>📍</span><span>Plot 14, Jinja Road, Busia Municipality, Eastern Uganda</span></div>
+        <div class="footer-contact-item"><span>📞</span><span>+256 772 123 456<br/>+256 700 987 654</span></div>
+        <div class="footer-contact-item"><span>✉️</span><span>info@busiasecondary.ac.ug</span></div>
+        <div class="footer-contact-item"><span>🕐</span><span>Mon–Fri: 8:00 AM – 5:00 PM<br/>Sat: 9:00 AM – 1:00 PM</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
+      <span>© 2025 Busia Secondary School. All rights reserved.</span>
+      <span>Designed with ❤️ for <a href="#">Busia Community</a> · <a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ LIGHTBOX ══ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <div class="lightbox-content">
+    <img id="lightbox-img" src="" alt="Gallery image" />
+  </div>
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close image">✕</button>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

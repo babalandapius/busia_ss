@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Academics at Busia Secondary School — O-Level, A-Level, departments, and class timetable."/>
+  <title>Academics | Busia Secondary School</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div id="preloader"><div class="preloader-logo">BUSIA <span>SS</span></div><div class="preloader-bar"><div class="preloader-fill"></div></div></div>
+<button id="back-top" aria-label="Back to top">↑</button>
+
+<!-- NAVBAR -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon">BSS</div><div class="nav-logo-text"><strong>Busia Secondary School</strong><span>Est. 1978 · Busia, Uganda</span></div></a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">About Us <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a><div class="dropdown"><a href="about.html#mission">Mission & Vision</a><a href="about.html#history">History</a><a href="about.html#staff">Staff</a><a href="about.html#facilities">Facilities</a></div></li>
+      <li class="nav-item"><a href="academics.html" class="nav-link active">Academics <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a><div class="dropdown"><a href="#olevel">O-Level (S.1–S.4)</a><a href="#alevel">A-Level (S.5–S.6)</a><a href="#departments">Departments</a><a href="#timetable">Class Timetable</a></div></li>
+      <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+      <li><a href="news.html" class="nav-link">News & Events</a></li>
+      <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="student-life.html" class="nav-link">Student Life</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="datetime-widget">📅 <span id="live-time">--:--</span></div>
+      <button class="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+      <a href="admissions.html" class="btn btn-gold btn-sm">Apply Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="nav-link">🏠 Home</a>
+  <a href="about.html" class="nav-link">📖 About Us</a>
+  <a href="academics.html" class="nav-link">📚 Academics</a>
+  <a href="admissions.html" class="nav-link">📝 Admissions</a>
+  <a href="news.html" class="nav-link">📰 News & Events</a>
+  <a href="gallery.html" class="nav-link">🖼️ Gallery</a>
+  <a href="student-life.html" class="nav-link">🎓 Student Life</a>
+  <a href="contact.html" class="nav-link">📞 Contact</a>
+  <div style="margin-top:2rem">
+    <a href="admissions.html" class="btn btn-gold" style="width:100%;justify-content:center;margin-bottom:.75rem">Apply Now</a>
+    <button class="dark-toggle" style="width:100%;background:rgba(255,255,255,.08);border-radius:8px;height:42px;color:#fff;font-size:.9rem">🌙 Toggle Dark Mode</button>
+  </div>
+</nav>
+<div class="ticker-wrap"><div class="ticker-label">📢 News</div><div class="ticker-track" id="ticker-track">Loading…</div></div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Academics</span></nav>
+    <h1 class="page-hero-title">Academic <span>Excellence</span></h1>
+    <p class="page-hero-sub">Rigorous O-Level and A-Level programmes taught by highly qualified teachers, preparing students for UNEB examinations and beyond.</p>
+  </div>
+</section>
+
+<!-- TABS: O-LEVEL / A-LEVEL -->
+<section class="section" id="olevel" aria-labelledby="academics-heading">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:2rem">
+      <span class="section-tag">Curriculum</span>
+      <h2 id="academics-heading" class="section-title">Our <span>Programmes</span></h2>
+    </div>
+
+    <div class="page-tabs" role="tablist">
+      <button class="page-tab active" data-tab="olevel" role="tab" aria-selected="true">📘 O-Level (S.1 – S.4)</button>
+      <button class="page-tab" data-tab="alevel" role="tab" aria-selected="false" id="alevel">📗 A-Level (S.5 – S.6)</button>
+      <button class="page-tab" data-tab="cocurricular" role="tab" aria-selected="false">🎨 Co-curricular</button>
+    </div>
+
+    <!-- O-Level Panel -->
+    <div class="tab-panel" data-panel="olevel">
+      <div class="welcome-grid" style="margin-bottom:3rem">
+        <div class="reveal">
+          <h3 class="section-title" style="font-size:1.8rem">Uganda Certificate of<br><span>Education (UCE)</span></h3>
+          <p style="color:var(--text-light);line-height:1.8;margin-bottom:1rem">Our O-Level programme (Senior 1 to Senior 4) follows the NCDC curriculum and prepares students for the Uganda Certificate of Education examinations. We offer a broad and balanced curriculum covering sciences, humanities, languages, and technical subjects.</p>
+          <p style="color:var(--text-light);line-height:1.8;margin-bottom:1.5rem">Students sit for a minimum of 8 subjects and a maximum of 10 subjects at UCE. Our 2024 results saw <strong>98% pass rate</strong> with 15 students attaining Division 1 and 47 students Division 2.</p>
+          <div style="display:flex;gap:1.5rem;flex-wrap:wrap;margin-bottom:1.5rem">
+            <div style="text-align:center;padding:1rem 1.5rem;background:var(--light-gray);border-radius:var(--radius-md)">
+              <div style="font-family:var(--font-display);font-size:2rem;font-weight:800;color:var(--primary)">98%</div>
+              <div style="font-size:.8rem;color:var(--text-light)">Overall Pass Rate</div>
+            </div>
+            <div style="text-align:center;padding:1rem 1.5rem;background:var(--light-gray);border-radius:var(--radius-md)">
+              <div style="font-family:var(--font-display);font-size:2rem;font-weight:800;color:var(--gold-dark)">15</div>
+              <div style="font-size:.8rem;color:var(--text-light)">Division 1 Students</div>
+            </div>
+            <div style="text-align:center;padding:1rem 1.5rem;background:var(--light-gray);border-radius:var(--radius-md)">
+              <div style="font-family:var(--font-display);font-size:2rem;font-weight:800;color:var(--success)">8</div>
+              <div style="font-size:.8rem;color:var(--text-light)">Min. Subjects Offered</div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80" alt="O-Level students" style="width:100%;border-radius:var(--radius-lg);object-fit:cover;height:350px;box-shadow:var(--shadow-lg)" loading="lazy"/>
+        </div>
+      </div>
+
+      <h3 class="section-title" style="font-size:1.5rem;text-align:center;margin-bottom:2rem">O-Level <span>Subjects Offered</span></h3>
+      <div class="subjects-grid">
+        <div class="subject-card reveal"><div class="subject-icon">🔢</div><div class="subject-name">Mathematics</div><div class="subject-desc">Core subject covering algebra, geometry, statistics, and applied mathematics.</div></div>
+        <div class="subject-card reveal reveal-delay-1"><div class="subject-icon">🔬</div><div class="subject-name">Biology</div><div class="subject-desc">Life sciences including cell biology, genetics, ecology, and human anatomy.</div></div>
+        <div class="subject-card reveal reveal-delay-2"><div class="subject-icon">⚗️</div><div class="subject-name">Chemistry</div><div class="subject-desc">Organic, inorganic, and physical chemistry with hands-on laboratory work.</div></div>
+        <div class="subject-card reveal reveal-delay-3"><div class="subject-icon">⚡</div><div class="subject-name">Physics</div><div class="subject-desc">Mechanics, electricity, optics, waves, and modern physics concepts.</div></div>
+        <div class="subject-card reveal"><div class="subject-icon">🌍</div><div class="subject-name">Geography</div><div class="subject-desc">Physical and human geography with practical map reading and fieldwork.</div></div>
+        <div class="subject-card reveal reveal-delay-1"><div class="subject-icon">📜</div><div class="subject-name">History</div><div class="subject-desc">African, Ugandan, and world history from pre-colonial times to present.</div></div>
+        <div class="subject-card reveal reveal-delay-2"><div class="subject-icon">📖</div><div class="subject-name">English Language</div><div class="subject-desc">Communication, comprehension, grammar, and creative writing skills.</div></div>
+        <div class="subject-card reveal reveal-delay-3"><div class="subject-icon">📚</div><div class="subject-name">Literature in English</div><div class="subject-desc">Set texts, poetry, prose, and drama from African and world literature.</div></div>
+        <div class="subject-card reveal"><div class="subject-icon">🏛️</div><div class="subject-name">Religious Education</div><div class="subject-desc">Christian Religious Education and Islamic Religious Education.</div></div>
+        <div class="subject-card reveal reveal-delay-1"><div class="subject-icon">💻</div><div class="subject-name">Computer Studies</div><div class="subject-desc">ICT fundamentals, programming basics, office applications, and internet use.</div></div>
+        <div class="subject-card reveal reveal-delay-2"><div class="subject-icon">🌱</div><div class="subject-name">Agriculture</div><div class="subject-desc">Crop science, animal husbandry, farm management, and soil science.</div></div>
+        <div class="subject-card reveal reveal-delay-3"><div class="subject-icon">💰</div><div class="subject-name">Commerce</div><div class="subject-desc">Business fundamentals, trade, banking, insurance, and entrepreneurship.</div></div>
+      </div>
+    </div>
+
+    <!-- A-Level Panel -->
+    <div class="tab-panel" data-panel="alevel" style="display:none" id="alevel-panel">
+      <div class="welcome-grid" style="margin-bottom:3rem">
+        <div class="reveal">
+          <h3 class="section-title" style="font-size:1.8rem">Uganda Advanced<br><span>Certificate of Education</span></h3>
+          <p style="color:var(--text-light);line-height:1.8;margin-bottom:1rem">Our A-Level programme (Senior 5 and Senior 6) prepares students for the Uganda Advanced Certificate of Education and direct university entry. Students choose from a range of subject combinations and are guided by specialist teachers with deep subject knowledge.</p>
+          <p style="color:var(--text-light);line-height:1.8;margin-bottom:1.5rem">In 2024, 94% of our A-Level students qualified for direct university admission, with 12 students earning government sponsorships to Makerere University.</p>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80" alt="A-Level students" style="width:100%;border-radius:var(--radius-lg);object-fit:cover;height:350px;box-shadow:var(--shadow-lg)" loading="lazy"/>
+        </div>
+      </div>
+
+      <h3 class="section-title" style="font-size:1.5rem;text-align:center;margin-bottom:2rem">A-Level Subject <span>Combinations</span></h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem">
+        <div class="info-card reveal" style="border-left:4px solid #3b82f6">
+          <div class="info-card-icon" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8)">🔬</div>
+          <h3 class="info-card-title">PCB — Sciences</h3>
+          <p class="info-card-text">Physics, Chemistry, Biology<br/>Subsidiary: Mathematics / ICT<br/><em>Ideal for: Medicine, Pharmacy, Agriculture</em></p>
+        </div>
+        <div class="info-card reveal reveal-delay-1" style="border-left:4px solid #8b5cf6">
+          <div class="info-card-icon" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9)">⚗️</div>
+          <h3 class="info-card-title">PCM — Sciences</h3>
+          <p class="info-card-text">Physics, Chemistry, Mathematics<br/>Subsidiary: Biology / ICT<br/><em>Ideal for: Engineering, IT, Actuarial Science</em></p>
+        </div>
+        <div class="info-card reveal reveal-delay-2" style="border-left:4px solid #f59e0b">
+          <div class="info-card-icon" style="background:linear-gradient(135deg,#f59e0b,#d97706)">📊</div>
+          <h3 class="info-card-title">MEG — Commerce</h3>
+          <p class="info-card-text">Mathematics, Economics, Geography<br/>Subsidiary: Entrepreneurship<br/><em>Ideal for: Business, Economics, Finance</em></p>
+        </div>
+        <div class="info-card reveal reveal-delay-3" style="border-left:4px solid #10b981">
+          <div class="info-card-icon" style="background:linear-gradient(135deg,#10b981,#059669)">📜</div>
+          <h3 class="info-card-title">HEG — Arts</h3>
+          <p class="info-card-text">History, Economics, Geography<br/>Subsidiary: General Paper<br/><em>Ideal for: Law, Public Administration, Social Sciences</em></p>
+        </div>
+        <div class="info-card reveal" style="border-left:4px solid #ef4444">
+          <div class="info-card-icon" style="background:linear-gradient(135deg,#ef4444,#b91c1c)">📖</div>
+          <h3 class="info-card-title">HGL — Arts</h3>
+          <p class="info-card-text">History, Government/Civics, Literature<br/>Subsidiary: Divinity<br/><em>Ideal for: Journalism, Law, Education</em></p>
+        </div>
+        <div class="info-card reveal reveal-delay-1" style="border-left:4px solid #06b6d4">
+          <div class="info-card-icon" style="background:linear-gradient(135deg,#06b6d4,#0284c7)">💻</div>
+          <h3 class="info-card-title">BCG — Technology</h3>
+          <p class="info-card-text">Biology, Chemistry, Geography<br/>Subsidiary: Mathematics<br/><em>Ideal for: Environmental Science, Nursing</em></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Co-curricular Panel -->
+    <div class="tab-panel" data-panel="cocurricular" style="display:none">
+      <div class="text-center" style="margin-bottom:2rem">
+        <p class="section-subtitle">Beyond the classroom, we offer a rich programme of co-curricular activities that develop the whole student.</p>
+      </div>
+      <div class="subjects-grid">
+        <div class="subject-card reveal"><div class="subject-icon">🎭</div><div class="subject-name">Drama Club</div><div class="subject-desc">Stage productions, acting workshops, and participation in national drama festivals.</div></div>
+        <div class="subject-card reveal reveal-delay-1"><div class="subject-icon">🎵</div><div class="subject-name">Music & Choir</div><div class="subject-desc">Traditional and contemporary music, school choir, and national competitions.</div></div>
+        <div class="subject-card reveal reveal-delay-2"><div class="subject-icon">🗣️</div><div class="subject-name">Debate Club</div><div class="subject-desc">Public speaking, argumentation, and interschool debate competitions.</div></div>
+        <div class="subject-card reveal reveal-delay-3"><div class="subject-icon">📰</div><div class="subject-name">Journalism Club</div><div class="subject-desc">School magazine, creative writing, photography, and media skills.</div></div>
+        <div class="subject-card reveal"><div class="subject-icon">🔭</div><div class="subject-name">Science Club</div><div class="subject-desc">Experiments, science fairs, robotics, and innovation challenges.</div></div>
+        <div class="subject-card reveal reveal-delay-1"><div class="subject-icon">♟️</div><div class="subject-name">Chess Club</div><div class="subject-desc">Strategy, critical thinking, and interschool chess tournaments.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPARTMENTS -->
+<section class="section section--gray" id="departments" aria-labelledby="dept-heading">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:2.5rem">
+      <span class="section-tag">Faculty</span>
+      <h2 id="dept-heading" class="section-title">Academic <span>Departments</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem">
+      <div class="info-card reveal">
+        <div class="info-card-icon">⚗️</div>
+        <h3 class="info-card-title">Sciences Department</h3>
+        <p class="info-card-text">Physics, Chemistry, Biology, Agriculture. 22 teachers. 3 modern labs. Regional Science Fair champions 2023 & 2024.</p>
+      </div>
+      <div class="info-card reveal reveal-delay-1">
+        <div class="info-card-icon">🔢</div>
+        <h3 class="info-card-title">Mathematics Department</h3>
+        <p class="info-card-text">Pure and Applied Mathematics for O and A-Level. 100% pass rate in 2024 UCE. 18 specialist teachers.</p>
+      </div>
+      <div class="info-card reveal reveal-delay-2">
+        <div class="info-card-icon">📖</div>
+        <h3 class="info-card-title">Languages Department</h3>
+        <p class="info-card-text">English, Literature, Luganda, Kiswahili. Award-winning debate and creative writing teams.</p>
+      </div>
+      <div class="info-card reveal reveal-delay-3">
+        <div class="info-card-icon">🌍</div>
+        <h3 class="info-card-title">Humanities Department</h3>
+        <p class="info-card-text">History, Geography, Religious Education, Civics. Field trips, research projects, and community engagement.</p>
+      </div>
+      <div class="info-card reveal">
+        <div class="info-card-icon">💰</div>
+        <h3 class="info-card-title">Business Studies</h3>
+        <p class="info-card-text">Commerce, Economics, Entrepreneurship, Accounting. Student business incubator programme.</p>
+      </div>
+      <div class="info-card reveal reveal-delay-1">
+        <div class="info-card-icon">💻</div>
+        <h3 class="info-card-title">ICT Department</h3>
+        <p class="info-card-text">Computer Studies, Digital Literacy, Coding. 100-computer lab with fibre broadband internet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMETABLE -->
+<section class="section" id="timetable" aria-labelledby="timetable-heading">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:2.5rem">
+      <span class="section-tag">Daily Schedule</span>
+      <h2 id="timetable-heading" class="section-title">Sample Class <span>Timetable</span></h2>
+      <p class="section-subtitle">A typical O-Level weekly schedule. Actual timetable may vary by class and term.</p>
+    </div>
+    <div style="overflow-x:auto" class="reveal">
+      <div class="timetable-grid" style="min-width:700px">
+        <!-- Headers -->
+        <div class="timetable-header">Time</div>
+        <div class="timetable-header">Monday</div>
+        <div class="timetable-header">Tuesday</div>
+        <div class="timetable-header">Wednesday</div>
+        <div class="timetable-header">Thursday</div>
+        <div class="timetable-header">Friday</div>
+        <!-- Row 1 -->
+        <div class="timetable-cell"><strong>8:00–8:40</strong></div>
+        <div class="timetable-cell"><strong>Mathematics</strong><small>Mr. Okello</small></div>
+        <div class="timetable-cell"><strong>English</strong><small>Mrs. Nalwanga</small></div>
+        <div class="timetable-cell"><strong>Biology</strong><small>Dr. Achieng</small></div>
+        <div class="timetable-cell"><strong>History</strong><small>Mr. Mugisha</small></div>
+        <div class="timetable-cell"><strong>Chemistry</strong><small>Mr. Otieno</small></div>
+        <!-- Row 2 -->
+        <div class="timetable-cell"><strong>8:40–9:20</strong></div>
+        <div class="timetable-cell"><strong>Physics</strong><small>Mr. Waiswa</small></div>
+        <div class="timetable-cell"><strong>Geography</strong><small>Mrs. Atim</small></div>
+        <div class="timetable-cell"><strong>Mathematics</strong><small>Mr. Okello</small></div>
+        <div class="timetable-cell"><strong>Chemistry</strong><small>Mr. Otieno</small></div>
+        <div class="timetable-cell"><strong>Physics</strong><small>Mr. Waiswa</small></div>
+        <!-- Row 3 BREAK -->
+        <div class="timetable-cell" style="background:var(--light-gray)"><strong>9:20–9:40</strong></div>
+        <div class="timetable-cell" colspan="5" style="background:var(--light-gray);color:var(--text-light);font-style:italic;grid-column:span 5">☕ Morning Break</div>
+        <!-- Row 4 -->
+        <div class="timetable-cell"><strong>9:40–10:20</strong></div>
+        <div class="timetable-cell"><strong>English</strong><small>Mrs. Nalwanga</small></div>
+        <div class="timetable-cell"><strong>Mathematics</strong><small>Mr. Okello</small></div>
+        <div class="timetable-cell"><strong>Physics</strong><small>Mr. Waiswa</small></div>
+        <div class="timetable-cell"><strong>Biology</strong><small>Dr. Achieng</small></div>
+        <div class="timetable-cell"><strong>Geography</strong><small>Mrs. Atim</small></div>
+        <!-- Row 5 -->
+        <div class="timetable-cell"><strong>10:20–11:00</strong></div>
+        <div class="timetable-cell"><strong>Chemistry</strong><small>Mr. Otieno</small></div>
+        <div class="timetable-cell"><strong>Biology</strong><small>Dr. Achieng</small></div>
+        <div class="timetable-cell"><strong>History</strong><small>Mr. Mugisha</small></div>
+        <div class="timetable-cell"><strong>English</strong><small>Mrs. Nalwanga</small></div>
+        <div class="timetable-cell"><strong>CRE</strong><small>Mrs. Ocen</small></div>
+        <!-- LUNCH -->
+        <div class="timetable-cell" style="background:var(--light-gray)"><strong>11:00–1:00</strong></div>
+        <div class="timetable-cell" style="background:var(--light-gray);color:var(--text-light);font-style:italic;grid-column:span 5">🍽️ Lunch Break</div>
+        <!-- Row 6 -->
+        <div class="timetable-cell"><strong>1:00–1:40</strong></div>
+        <div class="timetable-cell"><strong>Literature</strong><small>Mr. Lwanga</small></div>
+        <div class="timetable-cell"><strong>Commerce</strong><small>Mrs. Kagwa</small></div>
+        <div class="timetable-cell"><strong>Computer</strong><small>Mr. Opio</small></div>
+        <div class="timetable-cell"><strong>Mathematics</strong><small>Mr. Okello</small></div>
+        <div class="timetable-cell"><strong>Sports</strong><small>Mr. Odoi</small></div>
+        <!-- Row 7 -->
+        <div class="timetable-cell"><strong>1:40–2:20</strong></div>
+        <div class="timetable-cell"><strong>Agriculture</strong><small>Mr. Egesa</small></div>
+        <div class="timetable-cell"><strong>Physics</strong><small>Mr. Waiswa</small></div>
+        <div class="timetable-cell"><strong>Geography</strong><small>Mrs. Atim</small></div>
+        <div class="timetable-cell"><strong>Literature</strong><small>Mr. Lwanga</small></div>
+        <div class="timetable-cell"><strong>Sports</strong><small>Mr. Odoi</small></div>
+        <!-- Row 8 -->
+        <div class="timetable-cell"><strong>2:20–3:00</strong></div>
+        <div class="timetable-cell"><strong>Preps / Study</strong><small>Supervised</small></div>
+        <div class="timetable-cell"><strong>Preps / Study</strong><small>Supervised</small></div>
+        <div class="timetable-cell"><strong>Club Activities</strong><small>All clubs</small></div>
+        <div class="timetable-cell"><strong>Preps / Study</strong><small>Supervised</small></div>
+        <div class="timetable-cell"><strong>Assembly</strong><small>School-wide</small></div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:.82rem;color:var(--text-light);margin-top:1rem">* Evening preps run from 7:00 PM – 9:30 PM for boarding students under teacher supervision.</p>
+  </div>
+</section>
+
+<!-- PERFORMANCE STATS -->
+<section class="stats-section" aria-label="Academic performance">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:2.5rem">
+      <span class="section-tag" style="background:rgba(240,180,41,.2);color:var(--gold-light)">Performance</span>
+      <h2 class="section-title" style="color:var(--white)">Academic <span>Results 2024</span></h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card reveal"><div class="stat-icon">📊</div><div class="stat-number"><span class="counter" data-target="98">0</span><span class="stat-suffix">%</span></div><div class="stat-label">UCE Pass Rate</div></div>
+      <div class="stat-card reveal reveal-delay-1"><div class="stat-icon">🥇</div><div class="stat-number"><span class="counter" data-target="15">0</span></div><div class="stat-label">Division 1 Students</div></div>
+      <div class="stat-card reveal reveal-delay-2"><div class="stat-icon">🏛️</div><div class="stat-number"><span class="counter" data-target="12">0</span></div><div class="stat-label">Government Sponsorships</div></div>
+      <div class="stat-card reveal reveal-delay-3"><div class="stat-icon">📚</div><div class="stat-number"><span class="counter" data-target="94">0</span><span class="stat-suffix">%</span></div><div class="stat-label">UACE University Entry</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="margin-bottom:.5rem"><div class="nav-logo-icon">BSS</div><div class="nav-logo-text"><strong style="color:#fff">Busia Secondary School</strong><span>Est. 1978 · Busia, Uganda</span></div></a>
+        <p>Providing quality education and nurturing Uganda's future leaders since 1978.</p>
+        <div class="social-links"><a href="#" class="social-link">📘</a><a href="#" class="social-link">🐦</a><a href="#" class="social-link">📸</a><a href="#" class="social-link">▶️</a></div>
+      </div>
+      <div><div class="footer-heading">Quick Links</div><nav class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="academics.html">Academics</a><a href="admissions.html">Admissions</a><a href="news.html">News & Events</a></nav></div>
+      <div><div class="footer-heading">Academics</div><nav class="footer-links"><a href="#olevel">O-Level</a><a href="#alevel-panel">A-Level</a><a href="#departments">Departments</a><a href="#timetable">Timetable</a></nav></div>
+      <div><div class="footer-heading">Contact</div><div class="footer-contact-item"><span>📍</span><span>Plot 14, School Road, Busia Town</span></div><div class="footer-contact-item"><span>📞</span><span>+256 772 123 456</span></div><div class="footer-contact-item"><span>✉️</span><span>info@busiasecondary.ac.ug</span></div></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem"><span>© 2025 Busia Secondary School. All rights reserved.</span><span><a href="#">Privacy Policy</a></span></div></div>
+</footer>
+<div class="lightbox" id="lightbox"><div class="lightbox-content"><img id="lightbox-img" src="" alt=""/></div><button class="lightbox-close" id="lightbox-close">✕</button></div>
+<script src="js/script.js"></script>
+</body>
+</html>

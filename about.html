@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="About Busia Secondary School — our history, mission, vision, leadership, and world-class facilities."/>
+  <title>About Us | Busia Secondary School</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div id="preloader"><div class="preloader-logo">BUSIA <span>SS</span></div><div class="preloader-bar"><div class="preloader-fill"></div></div></div>
+<button id="back-top" aria-label="Back to top">↑</button>
+
+<!-- NAVBAR (shared) -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon">BSS</div><div class="nav-logo-text"><strong>Busia Secondary School</strong><span>Est. 1978 · Busia, Uganda</span></div></a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link active">About Us <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a><div class="dropdown"><a href="#mission">Mission & Vision</a><a href="#history">School History</a><a href="#staff">Faculty & Staff</a><a href="#facilities">Facilities</a></div></li>
+      <li><a href="academics.html" class="nav-link">Academics</a></li>
+      <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+      <li><a href="news.html" class="nav-link">News & Events</a></li>
+      <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="student-life.html" class="nav-link">Student Life</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="datetime-widget">📅 <span id="live-time">--:--</span></div>
+      <button class="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+      <a href="admissions.html" class="btn btn-gold btn-sm">Apply Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<nav class="mobile-menu" id="mobileMenu"><a href="index.html" class="nav-link">🏠 Home</a><a href="about.html" class="nav-link">📖 About Us</a><a href="academics.html" class="nav-link">📚 Academics</a><a href="admissions.html" class="nav-link">📝 Admissions</a><a href="news.html" class="nav-link">📰 News & Events</a><a href="gallery.html" class="nav-link">🖼️ Gallery</a><a href="student-life.html" class="nav-link">🎓 Student Life</a><a href="contact.html" class="nav-link">📞 Contact</a><div style="margin-top:2rem"><a href="admissions.html" class="btn btn-gold" style="width:100%;justify-content:center;margin-bottom:.75rem">Apply Now</a><button class="dark-toggle" style="width:100%;background:rgba(255,255,255,.08);border-radius:8px;height:42px;color:#fff;font-size:.9rem">🌙 Toggle Dark Mode</button></div></nav>
+
+<!-- TICKER -->
+<div class="ticker-wrap"><div class="ticker-label">📢 News</div><div class="ticker-track" id="ticker-track">Loading…</div></div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>About Us</span></nav>
+    <h1 class="page-hero-title">About <span>Busia Secondary School</span></h1>
+    <p class="page-hero-sub">Discover our rich history, our values, our people, and the facilities that make us East Uganda's premier secondary school.</p>
+  </div>
+</section>
+
+<!-- MISSION & VISION -->
+<section class="section" id="mission" aria-labelledby="mission-heading">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:3rem">
+      <span class="section-tag">Our Foundation</span>
+      <h2 id="mission-heading" class="section-title">Mission, Vision & <span>Core Values</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem">
+      <div class="info-card reveal" style="border-top:4px solid var(--primary)">
+        <div class="info-card-icon">🎯</div>
+        <h3 class="info-card-title">Our Mission</h3>
+        <p class="info-card-text">To provide quality, holistic secondary education that equips students with the knowledge, skills, values, and competencies needed for lifelong learning, productive citizenship, and meaningful contribution to Uganda and the global community.</p>
+      </div>
+      <div class="info-card reveal reveal-delay-1" style="border-top:4px solid var(--gold)">
+        <div class="info-card-icon">🌟</div>
+        <h3 class="info-card-title">Our Vision</h3>
+        <p class="info-card-text">To be the leading secondary school in Uganda, recognized for academic excellence, moral integrity, innovation, and the holistic development of every student into a responsible, competent, and visionary leader.</p>
+      </div>
+      <div class="info-card reveal reveal-delay-2" style="border-top:4px solid var(--success)">
+        <div class="info-card-icon">💎</div>
+        <h3 class="info-card-title">Core Values</h3>
+        <p class="info-card-text"><strong>Excellence</strong> — Setting the highest standards in all we do.<br/><strong>Integrity</strong> — Honesty and transparency always.<br/><strong>Respect</strong> — Dignity for every person.<br/><strong>Innovation</strong> — Embracing new ideas and methods.<br/><strong>Unity</strong> — One school, one family.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORY -->
+<section class="section section--gray" id="history" aria-labelledby="history-heading">
+  <div class="container">
+    <div class="welcome-grid">
+      <div class="welcome-text reveal">
+        <span class="section-tag">Our Heritage</span>
+        <h2 id="history-heading" class="section-title">46 Years of <span>Academic Legacy</span></h2>
+        <p style="color:var(--text-light);margin-bottom:1rem;line-height:1.8">Founded in 1978 by the Busia District Education Committee with just 4 classrooms and 120 students, Busia Secondary School has grown into one of Eastern Uganda's most prestigious institutions, now serving nearly 3,000 students from across the country.</p>
+        <p style="color:var(--text-light);margin-bottom:1rem;line-height:1.8">Through decades of dedicated leadership, community support, and a commitment to excellence, the school has produced thousands of graduates who now serve Uganda in medicine, law, engineering, business, politics, and the arts.</p>
+        <p style="color:var(--text-light);margin-bottom:1.5rem;line-height:1.8">Our growth from a modest district school to a nationally recognized centre of excellence is a testament to the hard work of our staff, the dedication of our students, and the unwavering support of the Busia community.</p>
+        <div style="display:flex;gap:1.5rem;flex-wrap:wrap">
+          <div style="text-align:center">
+            <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:900;color:var(--primary)">1978</div>
+            <div style="font-size:.8rem;color:var(--text-light)">Year Founded</div>
+          </div>
+          <div style="text-align:center">
+            <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:900;color:var(--gold-dark)">24</div>
+            <div style="font-size:.8rem;color:var(--text-light)">Principals Served</div>
+          </div>
+          <div style="text-align:center">
+            <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:900;color:var(--success)">50k+</div>
+            <div style="font-size:.8rem;color:var(--text-light)">Alumni Worldwide</div>
+          </div>
+        </div>
+      </div>
+      <div class="welcome-img-wrap reveal reveal-delay-2">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80" alt="School building" class="welcome-img" loading="lazy"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAFF -->
+<section class="section" id="staff" aria-labelledby="staff-heading">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:2.5rem">
+      <span class="section-tag">Our Team</span>
+      <h2 id="staff-heading" class="section-title">School <span>Leadership</span></h2>
+      <p class="section-subtitle">Our experienced and dedicated leadership team drives the school's vision and mission forward every day.</p>
+    </div>
+    <div class="leadership-grid">
+      <div class="leader-card reveal">
+        <img src="https://i.pravatar.cc/100?img=51" alt="Principal" class="leader-photo"/>
+        <div class="leader-name">Mr. John Wafula Okech</div>
+        <div class="leader-role">School Principal<br/><small style="color:var(--text-light)">M.Ed, Makerere University</small></div>
+      </div>
+      <div class="leader-card reveal reveal-delay-1">
+        <img src="https://i.pravatar.cc/100?img=33" alt="Deputy Principal" class="leader-photo"/>
+        <div class="leader-name">Mrs. Esther Nalwanga</div>
+        <div class="leader-role">Deputy Principal – Academics<br/><small style="color:var(--text-light)">B.Ed, Kyambogo University</small></div>
+      </div>
+      <div class="leader-card reveal reveal-delay-2">
+        <img src="https://i.pravatar.cc/100?img=15" alt="Deputy Principal Admin" class="leader-photo"/>
+        <div class="leader-name">Mr. Patrick Ochieng</div>
+        <div class="leader-role">Deputy Principal – Admin<br/><small style="color:var(--text-light)">MBA, Uganda Management Institute</small></div>
+      </div>
+      <div class="leader-card reveal reveal-delay-3">
+        <img src="https://i.pravatar.cc/100?img=22" alt="Head of Sciences" class="leader-photo"/>
+        <div class="leader-name">Dr. Sarah Achieng</div>
+        <div class="leader-role">Head of Sciences Department<br/><small style="color:var(--text-light)">PhD Chemistry, UCU</small></div>
+      </div>
+      <div class="leader-card reveal">
+        <img src="https://i.pravatar.cc/100?img=60" alt="Head of Arts" class="leader-photo"/>
+        <div class="leader-name">Mr. James Mugisha</div>
+        <div class="leader-role">Head of Humanities<br/><small style="color:var(--text-light)">MA History, Makerere</small></div>
+      </div>
+      <div class="leader-card reveal reveal-delay-1">
+        <img src="https://i.pravatar.cc/100?img=47" alt="Director of Studies" class="leader-photo"/>
+        <div class="leader-name">Mrs. Rose Akello</div>
+        <div class="leader-role">Director of Studies<br/><small style="color:var(--text-light)">B.Ed Mathematics, MUBS</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACILITIES -->
+<section class="section section--gray" id="facilities" aria-labelledby="facilities-heading">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:2.5rem">
+      <span class="section-tag">Infrastructure</span>
+      <h2 id="facilities-heading" class="section-title">World-Class <span>Facilities</span></h2>
+      <p class="section-subtitle">Modern infrastructure designed to support learning, sports, health, and social development.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.5rem">
+      <div class="subject-card reveal"><div class="subject-icon">🏫</div><div class="subject-name">45 Classrooms</div><div class="subject-desc">Spacious, well-lit classrooms with modern furniture, whiteboards, and projectors for enhanced learning.</div></div>
+      <div class="subject-card reveal reveal-delay-1"><div class="subject-icon">🔬</div><div class="subject-name">6 Science Labs</div><div class="subject-desc">Fully equipped Physics, Chemistry, Biology, Agriculture, and Computer labs with modern instruments.</div></div>
+      <div class="subject-card reveal reveal-delay-2"><div class="subject-icon">📚</div><div class="subject-name">Main Library</div><div class="subject-desc">Over 25,000 volumes, digital resources, and a dedicated reading room for senior students.</div></div>
+      <div class="subject-card reveal reveal-delay-3"><div class="subject-icon">💻</div><div class="subject-name">ICT Centre</div><div class="subject-desc">100-computer lab with fibre internet, available for all students and used across the curriculum.</div></div>
+      <div class="subject-card reveal"><div class="subject-icon">⚽</div><div class="subject-name">Sports Complex</div><div class="subject-desc">Football pitch, netball courts, athletics track, basketball courts, and tennis courts.</div></div>
+      <div class="subject-card reveal reveal-delay-1"><div class="subject-icon">🏠</div><div class="subject-name">Boarding Houses</div><div class="subject-desc">Separate boys' and girls' hostels accommodating 1,200 boarding students with 24-hour security.</div></div>
+      <div class="subject-card reveal reveal-delay-2"><div class="subject-icon">🍽️</div><div class="subject-name">Dining Hall</div><div class="subject-desc">Modern dining facility serving 3 nutritious meals daily, accommodating all students simultaneously.</div></div>
+      <div class="subject-card reveal reveal-delay-3"><div class="subject-icon">🏥</div><div class="subject-name">Medical Centre</div><div class="subject-desc">On-site clinic staffed by a qualified nurse and visiting doctor, ensuring students' health is prioritized.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:2.5rem">
+      <span class="section-tag">Common Questions</span>
+      <h2 id="faq-heading" class="section-title">Frequently Asked <span>Questions</span></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-question">What year was Busia Secondary School founded? <div class="faq-icon">+</div></button><div class="faq-answer">Busia Secondary School was founded in 1978 by the Busia District Education Committee. We have been providing quality education for over 46 years and have grown to become one of the leading secondary schools in Eastern Uganda.</div></div>
+      <div class="faq-item"><button class="faq-question">Is the school government-aided or private? <div class="faq-icon">+</div></button><div class="faq-answer">Busia Secondary School is a government-aided school, which means it receives partial funding from the Uganda government under the Universal Secondary Education (USE) program, while also charging supplementary fees to support quality education and facilities maintenance.</div></div>
+      <div class="faq-item"><button class="faq-question">Does the school offer boarding facilities? <div class="faq-icon">+</div></button><div class="faq-answer">Yes. We have modern boarding facilities for both boys and girls, accommodating up to 1,200 students. Our hostels have 24-hour security, clean ablution blocks, and comfortable dormitories. Day scholars are also welcome.</div></div>
+      <div class="faq-item"><button class="faq-question">What is the student-to-teacher ratio? <div class="faq-icon">+</div></button><div class="faq-answer">We maintain an average student-to-teacher ratio of 23:1, well within Uganda's recommended guidelines. This ensures that each student receives adequate attention and support from our 124 qualified teaching staff.</div></div>
+      <div class="faq-item"><button class="faq-question">How do I contact the school administration? <div class="faq-icon">+</div></button><div class="faq-answer">You can reach us by phone at +256 772 123 456, by email at info@busiasecondary.ac.ug, or visit our offices Monday to Friday, 8:00 AM – 5:00 PM. Our Contact page also has a form you can fill and we'll respond within 24 hours.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container"><div class="footer-grid"><div class="footer-brand"><a href="index.html" class="nav-logo" style="margin-bottom:.5rem"><div class="nav-logo-icon">BSS</div><div class="nav-logo-text"><strong style="color:#fff">Busia Secondary School</strong><span>Est. 1978 · Busia, Uganda</span></div></a><p>Providing quality education and nurturing the next generation of Uganda's leaders since 1978.</p><div class="social-links"><a href="#" class="social-link">📘</a><a href="#" class="social-link">🐦</a><a href="#" class="social-link">📸</a><a href="#" class="social-link">▶️</a></div></div><div><div class="footer-heading">Quick Links</div><nav class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="academics.html">Academics</a><a href="admissions.html">Admissions</a><a href="news.html">News & Events</a><a href="gallery.html">Gallery</a></nav></div><div><div class="footer-heading">Student Services</div><nav class="footer-links"><a href="student-life.html">Student Life</a><a href="student-life.html#clubs">Clubs & Societies</a><a href="student-life.html#sports">Sports</a><a href="admissions.html#fees">Fee Structure</a></nav></div><div><div class="footer-heading">Contact</div><div class="footer-contact-item"><span>📍</span><span>Plot 14, School Road, Busia Town</span></div><div class="footer-contact-item"><span>📞</span><span>+256 772 123 456</span></div><div class="footer-contact-item"><span>✉️</span><span>info@busiasecondary.ac.ug</span></div></div></div></div>
+  <div class="footer-bottom"><div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem"><span>© 2025 Busia Secondary School. All rights reserved.</span><span><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></span></div></div>
+</footer>
+<div class="lightbox" id="lightbox"><div class="lightbox-content"><img id="lightbox-img" src="" alt=""/></div><button class="lightbox-close" id="lightbox-close">✕</button></div>
+<script src="js/script.js"></script>
+</body>
+</html>

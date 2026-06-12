@@ -56,6 +56,7 @@ form.addEventListener('submit', async (e) => {
 
     // Automatically gathers everything including your hidden access_key input from HTML
     const formData = new FormData(form); 
+    formData.append("replyto", document.getElementById('cf-email').value);
     const originalText = submitBtn.textContent;
 
     submitBtn.textContent = "Sending...";

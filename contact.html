@@ -5,6 +5,7 @@
   <meta name="description" content="Contact Busia Secondary School — phone, email, location, and online contact form."/>
   <title>Contact Us | Busia Secondary School</title>
   <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <style>
     .contact-form-card {
       background:var(--white);
@@ -137,7 +138,7 @@
         <div style="margin-top:1.5rem" class="reveal">
           <strong style="display:block;font-size:.9rem;font-weight:600;margin-bottom:.75rem;color:var(--text)">Follow Us On Social Media</strong>
           <div class="contact-social">
-            <a href="#"><i class="fa-brands fa-facebook" style="color: rgb(255, 255, 255);"></i> Facebook</a>
+            <a href="#" class="contact-social-link fb"><i class="fa-brands fa-facebook" style="color: rgb(255, 255, 255);"></i> Facebook</a>
             <a href="#" class="contact-social-link tw"><i class="fa-brands fa-x-twitter" style="color: rgb(255, 255, 255);"></i>Twitter/X</a>
             <a href="#" class="contact-social-link ig"><i class="fa-brands fa-instagram" style="color: rgb(255, 255, 255);"></i> Instagram</a>
             <a href="#" class="contact-social-link wa"><i class="fa-brands fa-whatsapp" style="color: rgb(255, 255, 255);"></i> WhatsApp</a>
@@ -152,55 +153,64 @@
         <h3 style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:.4rem">Send Us a Message</h3>
         <p style="color:var(--text-light);font-size:.88rem;margin-bottom:1.5rem">Fill in the form below and we'll respond within 24 hours.</p>
 
-        <form id="contact-form" action="Mailto:babalandapius3@gmail.com" novalidate>
-          <div class="form-grid">
-            <div class="form-group">
-              <label class="form-label" for="cf-name">Full Name *</label>
-              <input class="form-input" id="cf-name" name="name" type="text" placeholder="Your full name" required/>
-              <div class="form-error"></div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="cf-email">Email Address *</label>
-              <input class="form-input" id="cf-email" name="email" type="email" placeholder="your@email.com" required/>
-              <div class="form-error"></div>
-            </div>
-          </div>
-          <div class="form-grid">
-            <div class="form-group">
-              <label class="form-label" for="cf-phone">Phone Number</label>
-              <input class="form-input" id="cf-phone" name="phone" type="tel" placeholder="+256 7XX XXX XXX"/>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="cf-subject">Subject *</label>
-              <select class="form-select" id="cf-subject" name="subject" required>
-                <option value="">Select a topic</option>
-                <option>Admissions Inquiry</option>
-                <option>Fee Payment</option>
-                <option>Academic Query</option>
-                <option>Student Welfare</option>
-                <option>Partnership / Sponsorship</option>
-                <option>Alumni Matters</option>
-                <option>General Inquiry</option>
-                <option>Other</option>
-              </select>
-              <div class="form-error"></div>
-            </div>
-          </div>
-          <div class="form-group" style="position:relative">
-            <label class="form-label" for="cf-message">Your Message * <small style="color:var(--text-light);font-weight:400">(max 500 characters)</small></label>
-            <textarea class="form-textarea" id="cf-message" name="message" placeholder="Type your message here…" maxlength="500" required></textarea>
-            <span class="char-count">0/500</span>
-            <div class="form-error"></div>
-          </div>
-          <!-- Honeypot anti-spam -->
-          <div style="display:none"><input type="text" name="_trap" tabindex="-1" autocomplete="off"/></div>
-          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:1rem;padding:1rem">
-            📨 Send Message
-          </button>
-          <p style="font-size:.78rem;color:var(--text-light);text-align:center;margin-top:.75rem">
-            🔒 Your message is stored securely. We never share your information.
-          </p>
-        </form>
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+  
+  <input type="hidden" name="access_key" value="805c79bf-f4c8-495e-84d7-b7061ff8be49">
+
+  <div class="form-grid">
+    <div class="form-group">
+      <label class="form-label" for="cf-name">Full Name *</label>
+      <input class="form-input" id="cf-name" name="name" type="text" placeholder="Your full name" required/>
+      <div class="form-error"></div>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="cf-email">Email Address *</label>
+      <input class="form-input" id="cf-email" name="email" type="email" placeholder="your@email.com" required/>
+      <div class="form-error"></div>
+    </div>
+  </div>
+  
+  <div class="form-grid">
+    <div class="form-group">
+      <label class="form-label" for="cf-phone">Phone Number</label>
+      <input class="form-input" id="cf-phone" name="phone" type="tel" placeholder="+256 7XX XXX XXX"/>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="cf-subject">Subject *</label>
+      <select class="form-select" id="cf-subject" name="subject" required>
+        <option value="">Select a topic</option>
+        <option>Admissions Inquiry</option>
+        <option>Fee Payment</option>
+        <option>Academic Query</option>
+        <option>Student Welfare</option>
+        <option>Partnership / Sponsorship</option>
+        <option>Alumni Matters</option>
+        <option>General Inquiry</option>
+        <option>Other</option>
+      </select>
+      <div class="form-error"></div>
+    </div>
+  </div>
+  
+  <div class="form-group" style="position:relative">
+    <label class="form-label" for="cf-message">Your Message * <small style="color:var(--text-light);font-weight:400">(max 500 characters)</small></label>
+    <textarea class="form-textarea" id="cf-message" name="message" placeholder="Type your message here…" maxlength="500" required></textarea>
+    <span class="char-count">0/500</span>
+    <div class="form-error"></div>
+  </div>
+  
+  <div style="display:none">
+    <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"/>
+  </div>
+  
+  <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:1rem;padding:1rem">
+    📨 Send Message
+  </button>
+  
+  <p style="font-size:.78rem;color:var(--text-light);text-align:center;margin-top:.75rem">
+    🔒 Your message is stored securely. We never share your information.
+  </p>
+</form>
       </div>
 
     </div>
@@ -240,7 +250,7 @@
         <div style="font-size:.85rem;color:var(--text-light)">From Busia Town centre, ask for "BSS" or "Busia Secondary School". 5 minutes.</div>
       </div>
       <div class="info-card text-center" style="padding:1.5rem">
-        <div style="font-size:2rem;margin-bottom:.5rem">✈️</div>
+        <div style="font-size:2rem;margin-bottom:.5rem"><i class="fa-solid fa-plane-departure" style="color: rgb(255, 255, 255);"></i></div>
         <div style="font-weight:700;margin-bottom:.3rem">From Nairobi</div>
         <div style="font-size:.85rem;color:var(--text-light)">Cross the Uganda–Kenya border at Busia (2 km). Easy access from western Kenya.</div>
       </div>
@@ -314,7 +324,7 @@
     <p style="color:rgba(255,255,255,.75);margin-bottom:1.5rem;font-size:1.05rem">Applications for 2025/2026 are now open. Start your journey to academic excellence today.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
       <a href="admissions.html" class="btn btn-gold">📝 Apply for Admission</a>
-      <a href="tel:+256772123456" class="btn btn-outline">📞 Call Us Now</a>
+      <a href="tel:+256772123456" class="btn btn-outline"><i class="fa-solid fa-phone-volume" style="color: rgb(255, 255, 255);"></i> Call Us Now</a>
     </div>
   </div>
 </section>
@@ -326,7 +336,13 @@
       <div class="footer-brand">
         <a href="index.html" class="nav-logo" style="margin-bottom:.5rem"><div class="nav-logo-icon">BSS</div><div class="nav-logo-text"><strong style="color:#fff">Busia Secondary School</strong><span>Est. 1978 · Busia, Uganda</span></div></a>
         <p>Providing quality education and nurturing Uganda's future leaders since 1978. Excellence is our standard.</p>
-        <div class="social-links"><a href="#" class="social-link">📘</a><a href="#" class="social-link">🐦</a><a href="#" class="social-link">📸</a><a href="#" class="social-link">▶️</a><a href="#" class="social-link">💬</a></div>
+        <div class="social-links">
+          <a href="#" class="social-link" title="Facebook"><i class="fa-brands fa-facebook" style="color: rgb(8, 0, 246);"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-x-twitter" style="color: rgb(0, 0, 0);"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-youtube" style="color: rgb(255, 0, 0);"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-instagram" style="color: rgb(0, 0, 0);"></i> </a>
+          <a href="#" class="social-link"><i class="fa-brands fa-whatsapp" style="color: rgb(0, 0, 0);"></i></a>
+        </div>
       </div>
       <div><div class="footer-heading">Quick Links</div><nav class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="academics.html">Academics</a><a href="admissions.html">Admissions</a><a href="news.html">News & Events</a><a href="gallery.html">Gallery</a></nav></div>
       <div><div class="footer-heading">Student Services</div><nav class="footer-links"><a href="student-life.html">Student Life</a><a href="student-life.html#clubs">Clubs & Societies</a><a href="student-life.html#sports">Sports</a><a href="student-life.html#leadership">Student Council</a><a href="admissions.html#fees">Fee Structure</a></nav></div>

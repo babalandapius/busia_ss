@@ -47,6 +47,49 @@ function updateDarkIcons(theme) {
   $$('.dark-toggle').forEach(btn => btn.textContent = theme === 'dark' ? '☀️' : '🌙');
 }
 
+// 1. Fixed the ID selector to match your HTML
+const form = document.getElementById('contact-form');
+const submitBtn = form.querySelector('button[type="submit"]');
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Automatically gathers everything including your hidden access_key input from HTML
+    const formData = new FormData(form); 
+    const originalText = submitBtn.textContent;
+
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            alert("Success! Your message has been sent.");
+            form.reset();
+            
+            // Optional: If you have a character counter span, reset its text too
+            const charCount = form.querySelector('.char-count');
+            if (charCount) charCount.textContent = "0/500";
+            
+        } else {
+            alert("Error: " + data.message);
+        }
+
+    } catch (error) {
+        console.error("Submission Error:", error);
+        alert("Something went wrong. Please try again.");
+    } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }
+});
+
 /* ═══════════════════════════════════════════
    3. STICKY NAVBAR
 ═══════════════════════════════════════════ */

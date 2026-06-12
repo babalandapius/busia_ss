@@ -235,19 +235,17 @@ input, textarea, select { font-family: var(--font-body); }
   font-size: 1.2rem; font-weight: 700; color: var(--gold);
   flex-shrink: 0;
 }
-.nav-logo-text { line-height: 1.2; }
+.nav-logo-text { 
+  line-height: 1.2; 
+  display: flex;
+  flex-direction: row;
+}
 .nav-logo-text strong {
   display: block;
   font-family: var(--font-display);
   font-size: 1rem; font-weight: 700;
-  color: var(--white);
+  color: blue;
   transition: color .3s;
-}
-.nav-logo-text span {
-  font-size: .7rem; font-weight: 500;
-  color: var(--gold-light);
-  letter-spacing: .05em;
-  text-transform: uppercase;
 }
 #navbar.scrolled .nav-logo-text strong { color: var(--text); }
 #navbar.scrolled .nav-logo-text span  { color: var(--text-light); }
@@ -325,13 +323,13 @@ input, textarea, select { font-family: var(--font-body); }
 .hamburger {
   display: none; flex-direction: column; gap: 5px;
   width: 38px; height: 38px; padding: 8px;
-  background: rgba(255,255,255,.15);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-sm);
   transition: background .2s;
 }
 .hamburger span {
   display: block; height: 2px;
-  background: var(--white);
+  background: var(--dm-bg);
   border-radius: 2px;
   transition: all .3s var(--ease);
 }
@@ -911,12 +909,16 @@ input, textarea, select { font-family: var(--font-body); }
 [data-theme="dark"] .info-card { background: var(--dm-surface); border-color: var(--dm-border); }
 .info-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
 .info-card-icon {
-  width: 56px; height: 56px; border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.5rem; margin-bottom: 1.25rem;
+  width: 56px; 
+  height: 56px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  font-size: 1.5rem; 
+  margin-bottom: 1.25rem;
   box-shadow: 0 8px 20px rgba(10,36,114,.25);
 }
+
 .info-card-title { font-family: var(--font-display); font-weight: 600; font-size: 1.1rem; margin-bottom: .5rem; }
 .info-card-text { font-size: .88rem; color: var(--text-light); line-height: 1.6; }
 
